@@ -1,7 +1,9 @@
-import { articles } from "@/data/articles";
 import { ArrowUpRight, Clock } from "lucide-react";
+import { getMediumArticles } from "@/lib/medium";
 
-export default function FeaturedArticles() {
+export default async function FeaturedArticles() {
+  const articles = await getMediumArticles();
+
   return (
     <section
       id="articles"
