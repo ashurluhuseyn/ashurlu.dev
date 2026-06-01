@@ -4,15 +4,27 @@ const parser = new Parser();
 
 export const revalidate = 86400;
 
+function stripHtml(html = "") {
+  return html
+    .replace(/<[^>]*>/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 export async function getMediumArticles() {
   const feed = await parser.parseURL(
     "https://medium.com/feed/@huseynashurlu"
   );
 
-  return feed.items.slice(0, 3).map((item) => ({
-    title: item.title || "",
-    description: item.contentSnippet || "",
-    url: item.link || "",
-    readTime: "Medium article",
-  }));
+  return feed.items.slice(0, 3).map((item) => {
+    const rawDescription =
+      item.contentSnippet || stripHtml(item.content || "");
+
+    return {
+      title: item.title || "",
+      description: rawDescription.slice(0, 140) + "...",
+      url: item.link || "",
+      readTime: "Medium article",
+    };
+  });
 }
