@@ -37,6 +37,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     title: "Huseyn Ashurlu | Senior Frontend Engineer",
+    images: ["/opengraph-image"],
     description:
       "Building scalable frontend systems, realtime experiences and modern fintech products.",
     url: "https://huseynashurlu.com",
@@ -48,6 +49,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Huseyn Ashurlu | Senior Frontend Engineer",
+    images: ["/opengraph-image"],
     description:
       "Building scalable frontend systems, realtime experiences and modern fintech products.",
   },
