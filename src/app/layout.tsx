@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
+
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,48 +17,51 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://huseynashurlu.com"),
 
-  title: "Huseyn Ashurlu | Senior Frontend Engineer",
-
+  title: "Huseyn Ashurlu | Software Engineer",
+  
   description:
-    "Senior Frontend Engineer based in Dubai focused on scalable frontend systems, realtime architecture and fintech products.",
+    "Senior Software Engineer focused on fintech, realtime systems and scalable frontend architecture.",
 
   keywords: [
     "Huseyn Ashurlu",
     "Frontend Engineer",
     "React Developer",
-    "Next.js",
     "TypeScript",
-    "Dubai Software Engineer",
-    "Frontend Architecture",
+    "Next.js",
+    "Fintech",
     "Realtime Systems",
-    "Fintech Engineer",
+    "Frontend Architecture",
+    "Dubai Software Engineer",
   ],
 
-  authors: [{ name: "Huseyn Ashurlu" }],
-  creator: "Huseyn Ashurlu",
-
   openGraph: {
-    title: "Huseyn Ashurlu | Senior Frontend Engineer",
-    images: ["/opengraph-image"],
+    title: "Huseyn Ashurlu | Software Engineer",
     description:
-      "Building scalable frontend systems, realtime experiences and modern fintech products.",
+      "Senior Software Engineer focused on fintech, realtime systems and scalable frontend architecture.",
     url: "https://huseynashurlu.com",
     siteName: "Huseyn Ashurlu",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Huseyn Ashurlu Portfolio",
+      },
+    ],
     locale: "en_US",
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Huseyn Ashurlu | Senior Frontend Engineer",
-    images: ["/opengraph-image"],
+    title: "Huseyn Ashurlu | Software Engineer",
     description:
-      "Building scalable frontend systems, realtime experiences and modern fintech products.",
+      "Senior Software Engineer focused on fintech, realtime systems and scalable frontend architecture.",
+    images: ["/og-image.png"],
   },
 
-  robots: {
-    index: true,
-    follow: true,
+  icons: {
+    icon: "/favicon.png",
   },
 };
 
