@@ -20,7 +20,7 @@ export default function Header() {
           href="#"
           className="bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-sm font-semibold tracking-tight text-transparent"
         >
-          Ashurlu
+          ASHURLU
         </a>
 
         <nav
