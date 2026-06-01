@@ -59,10 +59,6 @@ export const metadata: Metadata = {
       "Senior Software Engineer focused on fintech, realtime systems and scalable frontend architecture.",
     images: ["/og-image.png"],
   },
-
-  icons: {
-    icon: "/favicon.png",
-  },
 };
 
 export default function RootLayout({
