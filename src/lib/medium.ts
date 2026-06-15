@@ -2,7 +2,7 @@ import Parser from "rss-parser";
 
 const parser = new Parser();
 
-export const revalidate = 86400;
+export const revalidate = 3600;
 
 function stripHtml(html = "") {
   return html
@@ -16,7 +16,7 @@ export async function getMediumArticles() {
     "https://medium.com/feed/@huseynashurlu"
   );
 
-  return feed.items.slice(0, 3).map((item) => {
+  return feed.items.map((item) => {
     const rawDescription =
       item.contentSnippet || stripHtml(item.content || "");
 
