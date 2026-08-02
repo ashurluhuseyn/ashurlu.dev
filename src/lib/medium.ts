@@ -16,7 +16,7 @@ export async function getMediumArticles() {
     "https://medium.com/feed/@huseynashurlu"
   );
 
-  return feed.items.map((item) => {
+  return feed.items.slice(0,7).map((item) => {
     const rawDescription =
       item.contentSnippet || stripHtml(item.content || "");
 
